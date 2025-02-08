@@ -20,7 +20,9 @@
 {:else}
     <button class="ui blue button" onclick="{() => cont = !cont}">Get UI Link</button>
     <hr>
+    <h2>Új Állat rögzítése</h2>
     <form method="POST" action="?/newAnimal">
+        <div class="ui divider"></div>
         <div class="ui labeled input">
             <label class="ui blue image label" for="name">Állat neve:</label>
             <input type="text" name="name">
@@ -31,6 +33,6 @@
             <input type="number" name="age">
         </div>
         <div class="ui divider"></div>
-        <button class="ui blue button">Új állat</button>
+        <button class="ui blue button">Rögzít</button>
     </form>
 {/if}
