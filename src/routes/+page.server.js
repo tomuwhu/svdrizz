@@ -1,5 +1,13 @@
-import { getAnimals } from "$lib/server"
+import { getAnimals, newAnimal } from "$lib/server"
 export const load = async () => {
     const animals = await getAnimals();
-    return { animals };
+    return { animals }
+}
+export const actions = {
+    newAnimal: async ({ request }) => {
+        const form = await request.formData()
+        const name = form.get('name')
+        const age = form.get('age')
+        const { insertId } = newAnimal({ name, age })
+    }
 }
