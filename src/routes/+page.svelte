@@ -13,13 +13,13 @@
     <p>{animal.name} is {animal.age} years old</p>
 {/each}
 
-<button class="ui positive basic button" onclick="{() => cont = !cont}">Get UI Link</button>
-
-<hr>
-
 {#if cont}
-    <a target="_blank" href="https://semantic-ui.com/elements/button.html">Semantic UI</a>
+    <button class="ui teal button" onclick="{() => cont = !cont}">Insert New Animal</button>
+    <hr>
+    <a class ="ui large pink button" target="_blank" href="https://semantic-ui.com/elements/button.html">Semantic UI</a>
 {:else}
+    <button class="ui blue button" onclick="{() => cont = !cont}">Get UI Link</button>
+    <hr>
     <form method="POST" action="?/newAnimal">
         <div class="ui labeled input">
             <label class="ui blue image label" for="name">Állat neve:</label>
@@ -31,6 +31,6 @@
             <input type="number" name="age">
         </div>
         <div class="ui divider"></div>
-        <button class="ui positive basic button">Új állat</button>
+        <button class="ui blue button">Új állat</button>
     </form>
 {/if}
