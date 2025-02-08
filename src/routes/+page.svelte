@@ -4,10 +4,10 @@
 </script>
 
 <svelte:head>
-    <title>Home</title>
+    <title>Állatok</title>
 </svelte:head>
 
-<h1>Home</h1>
+<h1>Állatok</h1>
 
 {#each data.animals as animal}
     <p>{animal.name} is {animal.age} years old</p>

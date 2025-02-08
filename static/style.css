@@ -4,4 +4,12 @@
 
 body {
     text-align: center;
+    font-family: Iosevka-Regular;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-family: Iosevka-Regular;
+    font-size: 2em;
+    padding-top: 10px;
 }
