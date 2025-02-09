@@ -8,7 +8,7 @@
     <title>Állatok</title>
 </svelte:head>
 
-<h1>Állatok</h1>
+<h1>Állatok (Hunglish version)</h1>
 
 {#each data.animals as animal}
     <div class="row">
