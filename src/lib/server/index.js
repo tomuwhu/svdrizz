@@ -1,4 +1,5 @@
 import { drizzle } from 'drizzle-orm/better-sqlite3'
+import { eq } from 'drizzle-orm'
 import Database from 'better-sqlite3'
 import { env } from '$env/dynamic/private'
 if (!env.DATABASE_URL) throw new Error('DATABASE_URL is not set')
@@ -13,4 +14,12 @@ export const getAnimals = async () => {
 
 export const newAnimal = async ({ name, age }) => {
     const { insertId } = await db.insert(animals).values({ name, age }).returning();
+}
+
+export const updateAnimal = async ({ id, name, age }) => {
+    await db.update(animals).set({ name, age }).where(eq(animals.id, id))
+}
+
+export const deleteAnimal = async ({ id }) => {
+    await db.delete(animals).where(eq(animals.id, id))
 }
