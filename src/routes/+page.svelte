@@ -1,6 +1,6 @@
 <script>
     let { data } = $props()
-    let { cont } = $state(1)
+    let cont = $state(true)
     let fd = $state({ id: 0, name: "", age: 0 })
 </script>
 
@@ -13,7 +13,7 @@
 {#each data.animals as animal}
     <div class="row">
         <span>{animal.name} is {animal.age} years old</span>
-        <button class="ui blue small button" onclick="{() => fd = animal}">Módosít</button>
+        <button class="ui blue small button" onclick="{() => (fd = animal, cont = false)}">Módosít</button>
         <form class="delete">
             <button class="ui red small button" formaction="?/deleteAnimal" formmethod="POST" formenctype="multipart/form-data" name="id" value="{animal.id}">Törlés</button>
         </form>
@@ -22,7 +22,7 @@
 
 {#if cont}
     <button class="ui teal button" onclick="{() => {
-        cont = !cont
+        cont = false
         fd.id = 0
         fd.name = ""
         fd.age = 0
@@ -30,7 +30,7 @@
     <hr>
     <a class ="ui large pink button" target="_blank" href="https://semantic-ui.com/elements/button.html">Semantic UI</a>
 {:else}
-    <button class="ui blue button" onclick="{() => cont = !cont}">Semantic UI Linkje</button>
+    <button class="ui blue button" onclick="{() => cont = true}">Semantic UI Linkje</button>
     <hr>
     {#if fd.id}
         <h2>{fd.name} módosítása</h2>
