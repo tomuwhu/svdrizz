@@ -8,7 +8,7 @@
     <title>Állatok</title>
 </svelte:head>
 
-<h1>Állatok (Hunglish version)</h1>
+<h1>Állatok</h1>
 
 {#each data.animals as animal}
     <div class="row">
@@ -26,11 +26,11 @@
         fd.id = 0
         fd.name = ""
         fd.age = 0
-    }}">Insert New Animal</button>
+    }}">Űrlap megnyitása</button>
     <hr>
     <a class ="ui large pink button" target="_blank" href="https://semantic-ui.com/elements/button.html">Semantic UI</a>
 {:else}
-    <button class="ui blue button" onclick="{() => cont = !cont}">Get UI Link</button>
+    <button class="ui blue button" onclick="{() => cont = !cont}">Semantic UI Linkje</button>
     <hr>
     {#if fd.id}
         <h2>{fd.name} módosítása</h2>
