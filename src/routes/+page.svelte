@@ -3,13 +3,10 @@
     let cont = $state(true)
     let fd = $state({ id: 0, name: "", age: 0 })
 </script>
-
 <svelte:head>
     <title>Állatok</title>
 </svelte:head>
-
 <h1>Állatok</h1>
-
 {#each data.animals as animal}
     <div class="row">
         <span>{animal.name} is {animal.age} years old</span>
@@ -19,22 +16,18 @@
         </form>
     </div>
 {/each}
-
 {#if cont}
     <button class="ui teal button" onclick="{() => {
-        cont = false
-        fd.id = 0
-        fd.name = ""
-        fd.age = 0
+        cont = false, fd.id = 0, fd.name = "", fd.age = 0
     }}">Űrlap megnyitása</button>
     <hr>
     <a class ="ui large pink button" target="_blank" href="https://semantic-ui.com/elements/button.html">Semantic UI</a>
 {:else}
     <button class="ui blue button" onclick="{() => cont = true}">Semantic UI Linkje</button>
     <hr>
-    {#if fd.id}
+    {#if fd.id} 
         <h2>{fd.name} módosítása</h2>
-    {:else}
+    {:else}     
         <h2>Új Állat rögzítése</h2>
     {/if}
     <form method="POST">
@@ -57,20 +50,17 @@
         {/if}
     </form>
 {/if}
-
 <style>
     div span {
         display: inline-block;
-        height: 26px;
-        width: 300px;
+        height: 26px; width: 300px;
         text-align: right;
     }
     form.delete {
         display: inline-block;
     }
     div.row {
-        margin: 10px;
-        padding: 5px;
+        margin: 10px; padding: 5px;
         background-color: rgb(218, 244, 247);
         border-radius: 10px;
     }

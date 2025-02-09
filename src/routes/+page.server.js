@@ -1,4 +1,4 @@
-import { getAnimals, newAnimal, updateAnimal, deleteAnimal } from "$lib/server"
+import { getAnimals, newAnimal, updateAnimal, deleteAnimal } from "$lib"
 export const load = async () => {
     const animals = await getAnimals();
     return { animals }
