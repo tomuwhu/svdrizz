@@ -71,7 +71,7 @@
     div.row {
         margin: 10px;
         padding: 5px;
-        background-color: antiquewhite;
+        background-color: rgb(218, 244, 247);
         border-radius: 10px;
     }
 </style>
