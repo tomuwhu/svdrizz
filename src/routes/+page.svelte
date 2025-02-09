@@ -1,6 +1,6 @@
 <script>
     let { data } = $props()
-    let { cont } = $state(0)
+    let { cont } = $state(1)
     let fd = $state({ id: 0, name: "", age: 0 })
 </script>
 
