@@ -1,11 +1,9 @@
-# sv
+# SVDrizz
 
-## Install dependencies
-
-If you're seeing this, you've probably already done this step. Congrats!
+Sveltekit - Drizzle - SQLite Full Stack CRUD példa
 
 ```bash
-# create a new project in the current directory
+#  Install dependencies
 npm i
 ```
 
